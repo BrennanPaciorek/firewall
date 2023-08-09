@@ -18,6 +18,8 @@
         cmd: files/test_ping.sh
         executable: /bin/bash
       register: test_results
+      environment:
+        TEST_DEBUG: "true"
 
     - name: Process test results
       vars:
