@@ -4,7 +4,7 @@
 # by measuring how many packets are dropped while firewalld is restarting/reloading
 set -euo pipefail
 
-TEST_DEBUG="${TEST_DEBUG:-true}"
+TEST_DEBUG="${TEST_DEBUG:-false}"
 
 if [ "$TEST_DEBUG" = true ]; then
   exec 6>&1

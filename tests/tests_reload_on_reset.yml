@@ -19,7 +19,7 @@
         executable: /bin/bash
       register: test_results
       environment:
-        TEST_DEBUG: "true"
+        TEST_DEBUG: "{{ lookup('env', 'TEST_DEBUG') }}"
 
     - name: Process test results
       vars:
